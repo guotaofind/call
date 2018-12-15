@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "call", "call\call.csproj", "{B78B0CC5-380D-4B1C-8935-45FD72CA29DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Call", "Call\Call.csproj", "{5A3E4D98-221D-42A5-9F9D-96B3AC5BAEDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B78B0CC5-380D-4B1C-8935-45FD72CA29DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B78B0CC5-380D-4B1C-8935-45FD72CA29DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B78B0CC5-380D-4B1C-8935-45FD72CA29DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B78B0CC5-380D-4B1C-8935-45FD72CA29DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3E4D98-221D-42A5-9F9D-96B3AC5BAEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3E4D98-221D-42A5-9F9D-96B3AC5BAEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3E4D98-221D-42A5-9F9D-96B3AC5BAEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3E4D98-221D-42A5-9F9D-96B3AC5BAEDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7AFA9470-A8C9-48EF-85D0-A42A009401B7}
+		SolutionGuid = {A4A9F280-CF4C-44D4-8040-993BF99CD3F6}
 	EndGlobalSection
 EndGlobal
