@@ -7,26 +7,32 @@ namespace Call.Controllers
     public class DefaultController : ApiController
     {
         // GET: api/Default
-        public string Get()
+        public Value Get()
         {
-            using (var db = new IndexERPContext())
-            {
-                var flow = new Flow {name = "flow", flow_bpmn = @"asdf", flow_js = @"ddd" };
-                db.Flows.Add(flow);
-                db.SaveChanges();
-                var query = from b in db.Flows select b;
-                foreach (var item in query.ToList())
-                {
-                    string sss = item.flow_bpmn;
-                }
-            }
+            //using (var db = new IndexERPContext())
+            //{
+            //    var flow = new Flow {name = "flow", flow_bpmn = @"asdf", flow_js = @"ddd" };
+            //    db.Flows.Add(flow);
+            //    db.SaveChanges();
+            //    var query = from b in db.Flows select b;
+            //    foreach (var item in query.ToList())
+            //    {
+            //        string sss = item.flow_bpmn;
+            //    }
+            //}
 
             //var func = Edge.Func(File.ReadAllText("flow.js"));
             //return func(new
             //{
             //    processXml = File.ReadAllText("flow.bpmn")
             //}).Result.ToString();
-            return "";
+            return new Value
+            {
+                workflowId = "oa",
+                level = 100,
+                userName = "chengt",
+                cashAmount = 10000
+            };
         }
 
         // GET: api/Default/5
