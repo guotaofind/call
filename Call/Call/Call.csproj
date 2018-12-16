@@ -95,6 +95,7 @@
     <Content Include="App_Data\IndexDB_ERP6_log.ldf">
       <DependentUpon>IndexDB_ERP6.mdf</DependentUpon>
     </Content>
+    <Content Include="child.js" />
     <Content Include="edge\double_edge.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

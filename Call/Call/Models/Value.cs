@@ -8,8 +8,6 @@ namespace Call.Models
 {
     public class Value
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
         public string workflowId { get; set; }
         public string userName { get; set; }
         public int level { get; set; }

@@ -10,6 +10,7 @@ namespace Call.Models
         }
 
         public DbSet<Flow> Flows { get; set; }
+        public DbSet<WorkFlow> workFlows { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
