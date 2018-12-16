@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using Call.Models;
+using System.Linq;
 using System.Web.Http;
 
 namespace Call.Controllers
@@ -10,7 +11,7 @@ namespace Call.Controllers
         {
             using (var db = new IndexERPContext())
             {
-                var flow = new Flowttt { Id = 2, flow_bpmn = @"", flow_js = @"" };
+                var flow = new Flow {name = "flow", flow_bpmn = @"asdf", flow_js = @"ddd" };
                 db.Flows.Add(flow);
                 db.SaveChanges();
                 var query = from b in db.Flows select b;
