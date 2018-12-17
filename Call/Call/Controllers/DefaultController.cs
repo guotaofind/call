@@ -1,5 +1,6 @@
 ﻿using Call.Models;
 using EdgeJs;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Web.Http;
@@ -79,7 +80,7 @@ return function (data, cb) {
             }
         }, (err, definition) => {
             if (err) cb(err, null);
-            result.sum = definition.getProcesses()[0].context.variables.sum;
+            result.sum =  20;
             cb(err, result);
         });
     }
@@ -88,6 +89,7 @@ return function (data, cb) {
     }, 300);
 }");
             var result = func(workFlow).Result;
+            string json = JsonConvert.SerializeObject(result);
             //Result result = func(workFlow).Result as Result;
             return new State();
         }
