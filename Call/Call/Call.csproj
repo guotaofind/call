@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="IndexERPContext.cs" />
     <Compile Include="Models\Flow.cs" />
+    <Compile Include="Models\Result.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Models\Value.cs" />
     <Compile Include="Models\WorkFlow.cs" />

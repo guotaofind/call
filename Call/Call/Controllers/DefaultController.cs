@@ -1,5 +1,6 @@
 ﻿using Call.Models;
 using EdgeJs;
+using System;
 using System.Linq;
 using System.Web.Http;
 
@@ -14,6 +15,9 @@ namespace Call.Controllers
             value = new Value();
             value.flowId = "2";
             value.workflowId = "1000";
+            value.level = 100;
+            value.cashAmount = 10000;
+
             WorkFlow workFlow;
             using (var db = new IndexERPContext())
             {
@@ -51,13 +55,16 @@ listener.once('wait', (activity) => {
     engine.signal(activity.id);
 });
 return function (data, cb) {
+    result = {
+        sum: ''
+    };
     engine = new Bpmn.Engine({
-        source: data.processXml,
+        source: data.FlowBpmn,
         moddleOptions: {
             camunda: require('camunda-bpmn-moddle/resources/camunda')
         }
     });
-    if (cb.resume) {
+    if (data.resume) {
         engine = Bpmn.Engine.resume(state, {
             listener: listener
         });
@@ -67,25 +74,22 @@ return function (data, cb) {
         engine.execute({
             variables:
             {
-                manager: data.variables
+                manager: data.variables,
+                sum: data.variables
             }
         }, (err, definition) => {
             if (err) cb(err, null);
-            cb(err, 'Bpmn definition definition started with id' + definition.getProcesses()[0].context.variables.sum);
+            result.sum = definition.getProcesses()[0].context.variables.sum;
+            cb(err, result);
         });
     }
-    engine.signal(data.activityId);
     setTimeout(() => {
         const pending = engine.getPendingActivities();
-        console.log(JSON.stringify(pending, null, 2));
-
-        const task = pending.definitions[0].children.find(c => c.type === 'bpmn:UserTask');
-        
-        engine.signal(task.id);
     }, 300);
 }");
-            State state = (State)func(workFlow).Result;
-            return state;
+            var result = func(workFlow).Result;
+            //Result result = func(workFlow).Result as Result;
+            return new State();
         }
 
         // GET: api/Default/5
