@@ -1,7 +1,11 @@
-using System.Data.Entity;
-
-namespace Call.Models
+namespace Call
 {
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using Call.Models;
+
     public partial class IndexERPContext : DbContext
     {
         public IndexERPContext()
@@ -10,7 +14,7 @@ namespace Call.Models
         }
 
         public DbSet<Flow> Flows { get; set; }
-        public DbSet<WorkFlow> workFlows { get; set; }
+        public DbSet<WorkFlow> WorkFlows { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -8,6 +8,7 @@ namespace Call.Models
 {
     public class Value
     {
+        public string flowId { get; set; }
         public string workflowId { get; set; }
         public string userName { get; set; }
         public int level { get; set; }
