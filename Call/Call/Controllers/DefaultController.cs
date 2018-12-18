@@ -88,8 +88,9 @@ return function (data, cb) {
         const pending = engine.getPendingActivities();
     }, 300);
 }");
-            var result = func(workFlow).Result;
-            string json = JsonConvert.SerializeObject(result);
+            var cb = func(workFlow).Result;
+            string json = JsonConvert.SerializeObject(cb);
+            Result result = JsonConvert.DeserializeObject<Result>(json);
             //Result result = func(workFlow).Result as Result;
             return new State();
         }
